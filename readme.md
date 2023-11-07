@@ -9,7 +9,7 @@ This repository demonstrates class names minification issues in projects with Ne
 3. Create database and schema with `pnpm mikro-orm-esm database:create && pnpm mikro-orm-esm schema:update -r`
 4. Run `pnpm build`
 
-On the 3rd step, the `build` script fails with following error:
+On the last step, the `build` script fails with following error:
 
 
 ```
