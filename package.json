@@ -21,7 +21,7 @@
     "@mikro-orm/mysql": "^5.9.3",
     "mysql2": "^3.6.3",
     "nanoid": "3.3.4",
-    "next": "14.0.1",
+    "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
     "reflect-metadata": "^0.1.13"
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@mikro-orm/migrations": "^5.9.3",
     "@mikro-orm/seeder": "^5.9.3",
-    "@next/env": "^14.0.1",
+    "@next/env": "^13.5.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
