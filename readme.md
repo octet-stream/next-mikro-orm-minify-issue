@@ -1,0 +1,23 @@
+# next-mikro-orm-minify-issue
+
+This repository demonstrates class names minification issues in projects with Next.js and Mikro ORM
+
+## Reproduction
+
+1. Clone this repository
+2. Install dependencies via `pnpm i`
+3. Run `pnpm build`
+
+On the 3rd step, the `build` script fails with following error:
+
+
+```
+MetadataError: Duplicate entity names are not allowed: p
+```
+
+As you can see Mikro ORM complains about duplicate entity names. But why, if there's no entities with the same name?
+
+If you look at the console, you'll see that this is actually the case - some of two classes in bundle have the same name, but in the source code they have different names (`Post` and `InvitationCode`).
+Also, you can notice that half of the classes have their original names.
+From the looks of it, this happens because they don't have decorators on them.
+If you uncomment `Entity` decorator in `src/db/entities/Record.ts` file and run `pnpm build` again - you can clearly see that.
